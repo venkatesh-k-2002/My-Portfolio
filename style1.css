@@ -1,0 +1,594 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(30deg, #151515, #8728cb,#151515);
+    background-attachment: fixed; 
+    margin: 0; 
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif; /
+}
+/* ----------------------------Header Style------------------------------ */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(32, 31, 31); */
+    height: 5vw;
+    padding: 0 4vw;
+    
+}
+.logo{
+    color: white;
+    font-size: 2.2vw;
+    font-weight: 700;
+}
+.header-right{
+    display: flex;
+    gap: 5vw;
+}
+.header-right a{
+    color: white;
+    font-size: 1.3vw;
+    font-weight: 550;
+    padding: 5px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    /* transition: all 0.3s ease-in-out; */
+    
+}
+a:before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height:  5px;
+    width: 0;
+    background-color: #d325e6;
+    border-radius: 50px;
+    transition: width 0.3s ease;
+    
+}
+.header-right a:hover:before{
+    width: 100%;
+}
+
+.menu-icon{
+    display: none;
+    color: white;
+    font-size: 2vw;
+    font-weight: 700;
+}
+/* --------------------Header Responsive------------------------------------- */
+@media (max-width: 700px){
+    .header{
+        width: 100%;
+        height: 15vw;
+    }
+    .logo{
+        font-size: 5vw;
+    }
+    .header-right{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        font-size: 5vw;
+    }
+}
+
+
+
+
+
+/* -------------------Home Page Style------------------------------------------- */
+
+.homePage{
+    width: 100%;
+    height: calc(100vh - 5vw);
+    /* background-color: #cac9c9; */
+    /* background:linear-gradient(25deg, #151515, #8728cb); */
+    display: flex;
+
+}
+.homePage-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homePage-left img{
+    width: 70%;
+    border-radius: 38% 62% 37% 63% / 53% 37% 63% 47% ;
+    border: 3px solid black;
+    animation: floating 3s infinite  ease-in-out alternate;
+}
+@keyframes floating{
+    0%{
+        transform: translateY(0)
+    }
+    50%{
+        transform: translateY(25px)
+    }
+    100%{
+        transform: translateY(0)
+    }
+
+}
+
+.homePage-right{
+    width: 50%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.homePage-right h3{
+    font-size: 2vw;
+    /* color: black; */
+    color: white;
+    padding-bottom: 1vw;
+}
+.homePage-right h1{
+    font-size: 3vw;
+    text-transform: uppercase;
+    color: rgb(225, 222, 222);
+    background-color: black;
+    padding: 1vw 2vw;
+    border-radius: 30px;
+    margin-bottom: 1vw;
+}
+.homePage-right h2{
+    font-size: 1.5vw;
+    padding-bottom: 0.7vw;
+    color: white;
+}
+.homePage-right p{
+    font-size: 1.2vw;
+    padding: 1vw 0;
+    color: white;
+}
+.icon{
+    font-size: 1.5vw;
+}
+.icon a i{
+    /* color: black; */
+    color: white;
+    padding-top: 1vw;
+    font-size: 1.5vw;
+    padding: 0 0.5vw;
+    transition: all 0.3s ease-in;
+}
+
+/* .icon a i:hover{
+    background-color: white;
+    padding: 5px 5px;
+    border-radius: 5px;
+    color: black;
+} */
+#instagram i:hover{
+    color: rgb(208, 97, 116);
+    transform: scale(1.3);
+}
+#x-twitter i:hover{
+    color: rgb(0, 0, 0);
+    transform: scale(1.3);
+}
+
+#linkedin i:hover{
+    color: royalblue;
+    transform: scale(1.3);
+}
+
+#github i:hover{
+    color: rgb(0, 0, 0);
+    transform: scale(1.3);
+}
+
+/* -----------------Home Page Responsive-------------------- */
+
+@media (max-width: 600px) {
+    .homePage{
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 15vw);
+    }
+    .homePage-left{
+        width: 100%;
+        height: 50%;
+
+    }
+    .homePage img{
+        margin-top: 50px;
+    }
+    .homePage-right{
+        width: 100%;
+        height: 50%;
+    }
+    .homePage-right h3{
+        font-size: 5vw;
+        /* color: black; */
+        padding-bottom: 1vw;
+    }
+    .homePage-right h1{
+        font-size: 6vw;
+        text-transform: uppercase;
+        /* color: white;
+        background-color: black; */
+        padding: 1vw 2vw;
+        border-radius: 30px;
+        margin-bottom: 1vw;
+    }
+    .homePage-right h2{
+        font-size: 4vw;
+        padding-bottom: 0.7vw;
+    }
+    .homePage-right p{
+        font-size: 3vw;
+        padding: 2vw 0;
+        
+    }
+    .icon{
+        font-size: 1.5vw;
+        
+    }
+    .icon a{
+        padding: 2vw 1vw;
+    }
+    .icon a i{
+        /* padding-top: 1vw; */
+        font-size: 4vw;
+        padding: 0 0.5vw;
+    }
+
+}
+/* -------------------------Skills Page-------------------------- */
+
+.skills-page{
+ /* background:linear-gradient(152deg, #151515, #8728cb); */
+ height: 100vh;
+ width: 100%;
+}
+.skill-heading{
+    display: flex;
+    justify-content: center;
+}
+.skill-heading h3{
+    
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2vw;
+    background-color: rgb(32, 31, 31);
+    padding: 10px 20px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0 10px ;
+    
+}
+.skill-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2vw;
+}
+.mySkill{
+    padding-top: 4vw;
+    width: 50%;
+    height: 70%;
+}
+.mySkill li{
+    margin: 20px 0;
+    padding: 10px;
+    list-style: none;
+}
+.bar{
+    background:#353b48;
+    display: block;
+    height: 1vw;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+}
+.bar:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.bar span{
+    height: 1vw;
+    float: left;
+    /* background: linear-gradient(135deg, rgba(236, 0, 140,1)0%, rgba(252,103,103,1)100%); */
+}
+.skill-content img{
+    width: 3vw;
+}
+.html{
+    background: linear-gradient(135deg, rgb(187, 110, 110)0%, rgb(217, 33, 33)100%);
+    width: 90%;
+    animation: html 3s;
+}
+.css{
+    background: linear-gradient(135deg, rgb(108, 170, 189)0%, rgb(9, 148, 207)100%);
+    width: 70%;
+    animation: css 3s;
+}
+.javascript{
+    background: linear-gradient(135deg, rgb(184, 184, 113)0%, rgb(207, 191, 9)100%);
+    width: 45%;
+    animation: javascript 3s;
+}
+.react{
+    background: linear-gradient(135deg, rgb(114, 173, 183)0%, rgb(9, 171, 207)100%);
+    width: 50%;
+    animation: react 3s;
+}
+.bootstrap{
+    background: linear-gradient(135deg, rgb(32, 22, 35)0%, rgb(144, 9, 207)100%);
+
+    width: 40%;
+    animation: bootstrap 3s;
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+@keyframes react{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes bootstrap{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+/* -------------------SKills Responsive-------------------- */
+
+@media (max-width: 600px){
+    .skills-page{
+        height: 100%;
+        width: 100%;
+    }
+    .mySkill{
+        width: 80%;
+    }
+    .skill-content img{
+        width: 7vw;
+    }
+    .bar{
+        height: 2vw;
+    }
+    .bar span{
+        height: 2vw;
+    }
+}
+
+
+
+
+
+/* --------------------Project Page------------------------- */
+
+.project-page{
+    /* background: linear-gradient(29deg, #151515, #8728cb);; */
+    height: 100vh;
+    width: 100%;
+    /* background-color: #292828; */
+}
+.project-heading{
+    display: flex;
+    justify-content: center;
+}
+.project-heading h3{
+    
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2vw;
+    background-color: rgb(32, 31, 31);
+    padding: 10px 20px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0 10px ;
+    
+}
+.project-card-container{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-card{
+    height:  350px;
+    width: 250px;
+    background-color: rgba(255, 251, 251, 0.456);
+    margin: 20px;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 5px 11px 42px -8px rgba(0,0,0,1);
+-webkit-box-shadow: 5px 11px 42px -8px rgba(0,0,0,1);
+-moz-box-shadow: 5px 11px 42px -8px rgba(0,0,0,1);
+}
+
+.project-card .project-thumbnail{
+    width:  100%;
+    height: 45%;
+    /* border: 2px solid black; */
+}
+.project-thumbnail img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px 30px 0 0 ;
+}
+.project-details{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+}
+.project-details h4{
+    padding: 5px 15px;
+    font-size: 18px;
+}
+.project-details p{
+    padding:  0 15px;
+    text-align: justify;
+    color: black;
+}
+.project-details a{
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 5px;
+    font-size: 20px;
+}
+.project-details a:hover{
+    color: #d325e6;
+}
+
+/* ------------project responsive------------------- */
+
+@media (max-width: 600px){
+    .project-page{
+        height: 100%;
+        width: 100%;
+    }
+    .project-card-container{
+        flex-direction: column;
+    }
+}
+
+/* -------------------Contact Page----------------------- */
+
+.contact-page{
+    height: 50vh;
+    width: 100%;
+    background-color: #353b48;
+    display: flex;
+
+}
+.left-contact{
+    height: 100%;
+    width: 50%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.left-contact h1{
+    font-size: 2vw;
+    padding-bottom: 2vw;
+    color: rgb(242, 229, 40);
+}
+input {
+    width:300px;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+}
+textarea{
+    width:300px;
+    height: 10vh;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin: 7px;
+}
+::placeholder{
+    padding: 1.5vw;
+}
+button{
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #d325e6;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+button:hover{
+    background-color: #8728cb;
+}
+
+.right-contact{
+    height: 100%;
+    width: 50%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.right-contact h2{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+.right-contact a i{
+    font-size: 25px;
+    padding: 10px ;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 600px){
+    .contact-page{
+        height: 70vh;
+        width: 100%;
+        flex-direction: column;
+    }
+    .left-contact{
+        height: 70%;
+        width: 100%;
+    }
+    .right-contact{
+        height: 30%;
+        width: 100%;
+    }
+    .left-contact h1{
+        font-size: 30px;
+        padding: 20px;
+    }
+}
+
